@@ -7,6 +7,9 @@ const {
   updateContact,
   deleteContact,
 } = require("../controllers/contactControllers");
+const validateJWT = require("../middlewares/jwtValidateHandler");
+
+router.use(validateJWT);
 
 router.route("/").get(getContacts);
 

@@ -30,8 +30,32 @@
 > - npm install express
 
 ## 4. Project Structure
+src
+|__ configs
+|    |__ dbConnection.js
+|        
+|__ routers 
+|    |__ contactRouters.js
+|    |__ userRouters.js
+|
+|__ controllers
+|    |__ contactControllers.js
+|    |__ userControllers.js
+|
+|__ models
+|    |__ contactModel.js
+|    |__ userModel.js
+|
+|__ middlewares
+|    |__ errorHandler.js
+|    |__ jwtValidateHandler.js
+|
+|__ app.js
+|__ .env
 
 ## 5. Route & Controller divide
+- Router: route + route handler
+- Controller: route handler but seperate in different module.
 
 ## 6. Basic CRUD for Contact & User
 
@@ -39,18 +63,26 @@
 - Built-in JSON body parser middleware
 - Error handler middleware
 - JWT handler
+- 
 ## 8. File .env:
 - require("dotenv").config()
-- process.env.<Variable name>
+- process.env.[Variable name]
 
 ## 9. Error Handler & throw Error
+- throw new Error()
+- next(err)
 
 ## 10. Async Controller:
-- Bởi vì các công việc truy cập đến database là async
+- Bởi vì các công việc truy cập đến database và hash là async
 
 ## 11. Mongodb Setup & Mongoose
 - Schema => Model
+- Connect to mongodb cloud db
 
 ## 12. Simple Validating 
 
 ## 13. Login logic & Hashing password & JWT
+- Generate & Validate JWT with jsonwebtoken module.
+
+## Conclusion:
+- Review the expressjs project structure, simple api, simple login logic.
